@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ff5bb99b2342448fda8fdf401f2d094",
+    "content-hash": "a2152886663e7d2a526753e39890d7c1",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1383,6 +1383,7 @@
                 "reflection",
                 "static"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
