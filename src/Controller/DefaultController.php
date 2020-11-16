@@ -56,4 +56,14 @@ class DefaultController extends AbstractController
 			'actualites' => $actualites,
 		]);
 	}
+
+	/**
+     * @Route("/inscription", name="inscription")
+     */
+    public function inscription()
+    {
+        return $this->render('default/inscription.html.twig', [
+			'controller_name' => 'DefaultController',
+        ]);
+	}
 }

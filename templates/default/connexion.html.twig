@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block css %}base{% endblock %}
+
 {% block title %}Livequestion | Connexion{% endblock %}
 
 {% block body %}
 	<div class="col-11 text-center main">
 		<h1>Connexion</h1>
+		<p>Pas de compte ? Creez-en un <a href={{'inscription'}}>ici</a></p>
 	</div>
 {% endblock %}
