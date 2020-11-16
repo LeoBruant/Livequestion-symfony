@@ -12,7 +12,7 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('pages/index.html.twig', [
+        return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -22,7 +22,7 @@ class DefaultController extends AbstractController
      */
     public function connexion()
     {
-        return $this->render('pages/connexion.html.twig', [
+        return $this->render('default/connexion.html.twig', [
 			'controller_name' => 'DefaultController',
         ]);
 	}
@@ -52,7 +52,7 @@ class DefaultController extends AbstractController
 			],
 		];
 
-		return $this->render('pages/presentation.html.twig', [
+		return $this->render('default/presentation.html.twig', [
 			'actualites' => $actualites,
 		]);
 	}
