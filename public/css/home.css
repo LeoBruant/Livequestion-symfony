@@ -1,3 +1,15 @@
 .main{
-	margin: 40px auto;
+	margin: 80px auto;
+}
+
+.actualites .titre{
+	font-weight: 700;
+}
+
+.actualites .contenu{
+	text-align: justify;
+}
+
+.actualites .lien{
+	text-decoration: underline;
 }

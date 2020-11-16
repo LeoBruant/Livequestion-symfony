@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Livequestion | Presentation{% endblock %}
+
+{% block body %}
+	<div class="col-md-10 col-xl-8 text-center main">
+		<h1>Presentation</h1>
+		<br>
+		<section class="actualites">
+			<h2>News</h2>
+			{% set i = 0 %}
+			{% for news in actualites %}
+				{% set i = i + 1 %}
+				<br>
+				<p class="titre">{{ news.titre}} {{i}}</p>
+				<p class="contenu">{{ news.contenu }}</p>
+				<p class="lien"><a href="{{ news.lien }}" class="text-dark">{{ news.lien }}</a></p>
+				<br>
+			{% endfor %}
+		</section>
+	</div>
+{% endblock %}
