@@ -3,13 +3,25 @@
     <head>
         <meta charset="UTF-8">
 
-		<link rel="stylesheet" href="../../public/css/home.css">
+		<link rel="stylesheet" href="css/home.css">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
+		<navbar class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item {% if app.request.attributes.get('_route') == 'home' %}active{% endif %}">
+						<a class="nav-link" href={{ path('home') }}>Accueil <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item {% if app.request.attributes.get('_route') == 'connexion' %}active{% endif %}">
+						<a class="nav-link" href={{ path('connexion') }}>Connexion</a>
+					</li>
+				</ul>
+			</div>
+		</navbar>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
