@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\Profile;
+use App\Form\ProfileType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function index()
     {
@@ -22,8 +24,13 @@ class DefaultController extends AbstractController
      */
     public function connexion()
     {
+		$profile = new Profile();
+
+		$form = $this->createForm(ProfileType::class, $profile);
+
         return $this->render('default/connexion.html.twig', [
 			'controller_name' => 'DefaultController',
+			'form' => $form->createView(),
         ]);
 	}
 
