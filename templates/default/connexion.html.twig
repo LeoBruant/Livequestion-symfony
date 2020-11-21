@@ -8,7 +8,17 @@
 	<div class="col-11 text-center main">
 		<h1>Connexion</h1>
 
-		{{ form(form) }}
+		{{ form_start(form) }}
+			<div>
+				{{ form_errors(form) }}
+			</div>
+			<div class="form-group">
+				{{ form_row(form.username) }}
+			</div>
+			<div class="form-group">
+				{{ form_row(form.password) }}
+			</div>
+		{{ form_end(form) }}
 
 		<p>Pas de compte ? Creez-en un <a href={{'inscription'}}>ici</a></p>
 	</div>
