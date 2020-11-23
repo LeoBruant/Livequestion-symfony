@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+	<div class="col-sm-6 col-md-5 col-xl-3 mx-auto">
+		<h1 class="mt-5 mb-5 text-center">Inscription</h1>
+
+		{{ include('profile/_form.html.twig') }}
+
+		<div class="text-center">
+			<a href="{{ path('profile_index') }}" class="text-center">back to menu</a>
+		</div>
+	</div>
+{% endblock %}

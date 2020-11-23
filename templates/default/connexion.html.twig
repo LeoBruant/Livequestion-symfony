@@ -5,21 +5,19 @@
 {% block title %}Livequestion | Connexion{% endblock %}
 
 {% block body %}
-	<div class="col-11 text-center main">
+	<div class="col-md-3 text-center main">
 		<h1>Connexion</h1>
 
 		{{ form_start(form) }}
-			<div>
-				{{ form_errors(form) }}
+			{{ form_errors(form) }}
+			<div class="form-group">
+				{{ form_widget(form.Username, {'attr': {'placeholder': 'Username'}}) }}
 			</div>
 			<div class="form-group">
-				{{ form_row(form.username) }}
-			</div>
-			<div class="form-group">
-				{{ form_row(form.password) }}
+				{{ form_widget(form.Password, {'attr': {'placeholder': 'Password'}}) }}
 			</div>
 		{{ form_end(form) }}
 
-		<p>Pas de compte ? Creez-en un <a href={{'inscription'}}>ici</a></p>
+		<p>Pas de compte ? Creez-en un <a href={{'profile/new'}}>ici</a></p>
 	</div>
 {% endblock %}

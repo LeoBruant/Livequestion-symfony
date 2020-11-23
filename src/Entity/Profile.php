@@ -10,6 +10,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Profile
 {
+	const GENDER_MAN = 'man';
+	const GENDER_WOMAN = 'woman';
+	const GENDER_NON_BINARY = 'non binary';
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -46,7 +50,7 @@ class Profile
      * @ORM\OneToOne(targetEntity=Role::class, cascade={"persist", "remove"})
      * @ORM\JoinColumn(nullable=false)
      */
-    private $role;
+	private $role;
 
     public function getId(): ?int
     {
